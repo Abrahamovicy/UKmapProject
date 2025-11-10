@@ -145,7 +145,7 @@ def grid_to_ascii(grid, charset):
 
     # Use quantiles to create thresholds. This ensures that the
     # characters are distributed well, even if data is skewed.
-    # We create len(charset)-1 boundaries.
+    # i create len(charset)-1 boundaries.
     num_levels = len(charset) - 1
     quantiles = np.linspace(0.0, 1.0, num=num_levels + 1)[1:] # e.g., [0.11, 0.22, ... 1.0]
     thresholds = np.quantile(vals, quantiles)
@@ -216,4 +216,5 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
+
     main()
